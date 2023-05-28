@@ -1,0 +1,29 @@
+[connect-base]
+certPath = ""
+keyPath = ""
+
+[connect-websocket]
+bind = "0.0.0.0:7000"
+readBufSize = 512
+writeBufSize = 1024
+maxMsgSize = 1024
+broadcastSize = 1024
+writeWait = 10
+pongWait = 60
+pingPeriod = 54
+
+[connect-rpcAddress-websockets]
+address = "tcp@127.0.0.1:6912,tcp@127.0.0.1:6913"
+sdName = "connect"
+sdVersion = "1.0"
+sdDir = "/backend/connect"
+
+[connect-bucket]
+cpuNum = 4
+channel = 1024
+room = 1024
+svrProto = 80
+routineAmount = 32
+routineSize = 20
+
+

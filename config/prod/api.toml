@@ -1,0 +1,4 @@
+[api-base]
+listenPort = 7070
+serveIp = "192.168.0.20"
+uploadDir = "public/single"

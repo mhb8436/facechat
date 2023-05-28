@@ -1,0 +1,60 @@
+// protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative *.proto
+
+syntax = "proto3";
+
+package proto;
+
+option go_package = ".";
+
+message ConnectReq {
+    string access_token = 1;
+    string server_id = 2;
+}
+
+message ConnectResp {
+    string user_id = 1;
+}
+
+message DisConnectReq {
+    string user_id = 1;
+}
+
+message DisConnectResp {
+    bool has = 1;
+}
+
+message SendReq {
+    int64 code = 1;
+    string msg = 2;
+    string access_token = 3;
+    string room_uuid = 4;
+}
+
+message SendResp {
+    bool ok = 1;
+}
+
+message SaveUnReadMsgReq{
+    string user_id = 1;
+    string msg = 2;
+}
+
+message SaveUnReadMsgResp {
+    bool ok = 1;
+}
+
+message GetUnReadMsgReq{
+    string user_id = 1;
+}
+
+message GetUnReadMsgResp{
+    repeated string msg = 1;
+}
+
+service Message {
+    rpc Connect(ConnectReq) returns (ConnectResp) {}
+    rpc DisConnect(DisConnectReq) returns (DisConnectResp) {}    
+    rpc Send(SendReq) returns (SendResp) {}
+    rpc SaveUnReadMsg(SaveUnReadMsgReq) returns (SaveUnReadMsgResp) {}
+    rpc GetUnReadMsg(GetUnReadMsgReq) returns (GetUnReadMsgResp) {}
+}

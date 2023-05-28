@@ -1,0 +1,14 @@
+[common-etcd]
+host = "127.0.0.1:2379"
+basePath = "/facechat_svr"
+serverPathUserLogic = "UserRpc"
+serverPathMessageLogic = "UserRpc"
+serverPathConnect = "ConnectRpc"
+userName = ""
+password = ""
+connectionTimeout = 5
+
+[common-redis]
+redisAddress = "127.0.0.1:6379"
+redisPassword = ""
+db = 0
