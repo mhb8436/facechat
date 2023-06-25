@@ -3,7 +3,7 @@ certPath = ""
 keyPath = ""
 
 [connect-websocket]
-bind = "0.0.0.0:7000"
+bind = "0.0.0.0:7700"
 readBufSize = 512
 writeBufSize = 1024
 maxMsgSize = 1024
