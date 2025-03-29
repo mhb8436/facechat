@@ -48,3 +48,22 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Database files
+*.db
+*.sqbpro
+
+# Environment variables
+.env
+.env.*
+
+# IDE specific files
+.vscode/
+*.swp
+*.swo
+
+# Config files with sensitive information
+config/dev/*.toml
+config/prod/*.toml
+!config/dev/*.example.toml
+!config/prod/*.example.toml
+

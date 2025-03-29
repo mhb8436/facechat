@@ -1,6 +1,6 @@
 [connect-base]
-certPath = ""
-keyPath = ""
+certPath = "****"
+keyPath = "****"
 
 [connect-websocket]
 bind = "0.0.0.0:7700"

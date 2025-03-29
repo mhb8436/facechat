@@ -32,7 +32,8 @@ func InitDB(dbName string) {
 }
 
 func InitPostgres(dbName string) {
-	dsn := "host=localhost user=mhb8436 password=dbwj1234 dbname=lilac port=5432"
+	// dsn := "host=localhost user=mhb8436 password=dbwj1234 dbname=lilac port=5432"
+	dsn := "host=localhost user=**** password=**** dbname=**** port=5432"
 	syncLock.Lock()
 	db, e := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	dbMap[dbName] = db
